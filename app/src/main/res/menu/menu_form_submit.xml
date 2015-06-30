@@ -1,0 +1,19 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools" tools:context="test.firstapp.FormSubmit">
+    <item android:id="@+id/firstName"
+        android:title="@string/firstName"
+        android:showAsAction="never" />
+    <item android:id="@+id/lastName"
+        android:title="@string/lastName"
+        android:showAsAction="never" />
+    <item android:id="@+id/email"
+        android:title="@string/email"
+        android:showAsAction="never" />
+    <item android:id="@+id/password"
+        android:title="@string/password"
+        android:showAsAction="never" />
+    <item android:id="@+id/gender"
+        android:title="@string/gender"
+        android:showAsAction="never" />
+</menu>
