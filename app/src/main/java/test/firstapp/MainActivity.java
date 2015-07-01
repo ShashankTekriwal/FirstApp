@@ -13,16 +13,11 @@ import android.widget.RadioGroup;
 
 public class MainActivity extends ActionBarActivity {
 
-    public final static String FNAME = "test.firstapp.FNAME";
-    public final static String LNAME = "test.firstapp.LNAME";
-    public final static String EMAIL = "test.firstapp.EMAIL";
-    public final static String PASSWORD = "test.firstapp.PASSWORD";
-    public final static String GENDER = "test.firstapp.GENDER";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.form);
+        setContentView(R.layout.activity_main);
     }
 
     @Override
@@ -47,32 +42,4 @@ public class MainActivity extends ActionBarActivity {
         return super.onOptionsItemSelected(item);
     }
 
-    public void onSubmit(View view){
-        Intent intent = new Intent(this, FormSubmit.class);
-        Bundle bundle = new Bundle();
-
-        EditText editText = (EditText) findViewById(R.id.firstName);
-        String temp = editText.getText().toString();
-        bundle.putString(FNAME, temp);
-
-        editText = (EditText) findViewById(R.id.lastName);
-        temp = editText.getText().toString();
-        bundle.putString(LNAME, temp);
-
-        editText = (EditText) findViewById(R.id.email);
-        temp = editText.getText().toString();
-        bundle.putString(EMAIL, temp);
-
-        editText = (EditText) findViewById(R.id.password);
-        temp = editText.getText().toString();
-        bundle.putString(PASSWORD, temp);
-
-        RadioGroup rg = (RadioGroup) findViewById(R.id.gender);
-        int selectedId = rg.getCheckedRadioButtonId();
-        temp = ((RadioButton) findViewById(selectedId)).getText().toString();
-        bundle.putString(GENDER,temp);
-
-        intent.putExtras(bundle);
-        startActivity(intent);
-    }
 }
